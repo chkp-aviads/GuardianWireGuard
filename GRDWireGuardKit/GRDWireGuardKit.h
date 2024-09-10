@@ -14,7 +14,7 @@
 // self contained and portable have the imported specifically in the way it is done below
 // and all the headers need to be publically exposed in GRDWireGuardKit so that the 
 // importing app can use them
-#import "GRDWireGuardKit/WireGuardKitC.h"
+#import <GRDWireGuardKit/WireGuardKitC.h>
 #import <GRDWireGuardKit/wireguard.h>
 #import <GRDWireGuardKit/ringlogger.h>
 #import <GRDWireGuardKit/key.h>

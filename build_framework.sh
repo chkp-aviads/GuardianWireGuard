@@ -11,7 +11,7 @@ rm -rf GRDWireGuardKit.xcframework.zip
 
 xcodebuild -sdk iphonesimulator -target GRDWireGuardKitiOS
 xcodebuild -sdk iphoneos -target GRDWireGuardKitiOS
-xcodebuild -sdk macosx -target GRDWireGuardKitmacOS
+#xcodebuild -sdk macosx -target GRDWireGuardKitmacOS
 
 pwd=$(pwd)
 lipo=$(which lipo)
@@ -31,10 +31,11 @@ popd || exit
 # create variables for the path to each respective framework
 ios_fwpath=$pwd/build/Release-iphoneos/$name.framework
 sim_fwpath=$pwd/build/Release-iphonesimulator/$name.framework
-mac_path=$pwd/build/Release/$name.framework
+# mac_path=$pwd/build/Release/$name.framework
 
 # create the xcframework
-xcodebuild -create-xcframework -framework "$ios_fwpath" -framework "$sim_fwpath" -framework "$mac_path" -output "$name".xcframework
+# xcodebuild -create-xcframework -framework "$ios_fwpath" -framework "$sim_fwpath" -framework "$mac_path" -output "$name".xcframework
+xcodebuild -create-xcframework -framework "$ios_fwpath" -framework "$sim_fwpath" -output "$name".xcframework
 
 printf "\n\n"
 printf "Proccesing SwiftPM artifacts\n"
