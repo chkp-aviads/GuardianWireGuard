@@ -20,7 +20,7 @@ let package = Package(
         .binaryTarget(
             name: "GRDWireGuardKit",
             url:"https://github.com/chkp-aviads/GuardianWireGuard/releases/download/1.3.2/GRDWireGuardKit.xcframework.zip",
-            checksum: "d1572eb0c92c3f183acbaced83552cab2256790600163726033e689ce9d09e65"
+            checksum: "c0c370e3d5adfa948299bcf87d43925cd609e43643bbc03b580eb6e2a707dfb5"
         )
 	]
 )
